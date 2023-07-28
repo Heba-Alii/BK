@@ -35,4 +35,13 @@ fun main() {
     // ?. -> if varaiable in null print null if variable is value print this value
     // !! -> i'm sure that this vaariable contain a value not null
     // ? -> (after data type) this varible possible contain null or contain value
+    //------------------------------------------
+    var name:String="heba ali ali"
+    val secondWord=name.indexOf('l')
+    println(name.substring(secondWord))
+    //-------------------------------------------
+    var userName=" heba ali ali"
+    println(userName.isBlank())
+    //isBlank = true if the variable is empty and return false if variable is not empty
+    //--------------------------------------------
 }

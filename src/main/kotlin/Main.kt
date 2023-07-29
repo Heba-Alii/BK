@@ -68,7 +68,37 @@ fun main() {
     //-----------------------------
     val numberOne = 200
     val numberTwo = 500
-    var max = if (numberOne>numberTwo) numberOne else numberTwo
+    val max = if (numberOne > numberTwo) numberOne else numberTwo
     println("Max : $max")
     //-------------------------------
+    //Ranges
+    val friendsCount: Int = 20
+    if (friendsCount in 0..20) {
+        println("lonely")
+    } else if (friendsCount in 20..100) {
+        println("family & friends")
+
+    } else if (friendsCount in 100..500) {
+        println("Social Person")
+    } else if (friendsCount in 500..2000) {
+        println("famous")
+    }
+    //---------------------------------------
+    val myRange = 0.rangeTo(20)
+    println("please enter your number !!")
+    val yourNumber: Int = readln()!!.toInt()
+    if (yourNumber in myRange) {
+        println("$yourNumber in Range")
+    } else {
+        println("$yourNumber is not in range")
+    }
+//------------------------------------
+    var wordRanges = 'a'.rangeTo('m')
+    println("please enter your word")
+    var yourWord = readln()!!.toCharArray()[0]
+    if (yourWord in wordRanges) {
+        println("$yourWord is in range")
+    } else {
+        println("$yourWord is not in range")
+    }
 }

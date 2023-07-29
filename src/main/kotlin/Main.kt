@@ -36,12 +36,39 @@ fun main() {
     // !! -> i'm sure that this vaariable contain a value not null
     // ? -> (after data type) this varible possible contain null or contain value
     //------------------------------------------
-    var name:String="heba ali ali"
-    val secondWord=name.indexOf('l')
+    var name: String = "heba ali ali"
+    val secondWord = name.indexOf('l')
     println(name.substring(secondWord))
     //-------------------------------------------
-    var userName=" heba ali ali"
+    var userName = " heba ali ali"
     println(userName.isBlank())
     //isBlank = true if the variable is empty and return false if variable is not empty
     //--------------------------------------------
+    //Conditions
+    val isUserBlocked = false
+    val followerCount = 320000
+    if (isUserBlocked) {
+        println("User Is Blocked")
+    } else
+        println("User is not Blocked")
+    //--------------------------
+    if (4 < 2) {
+        println("true")
+    } else {
+        println("false")
+    }
+    //--------------------
+    if (followerCount < 1000) {
+        println(followerCount)
+    } else if (followerCount < 1000000) {
+        println("${followerCount / 1000}k")
+    } else {
+        println("${followerCount / 1000000}M")
+    }
+    //-----------------------------
+    val numberOne = 200
+    val numberTwo = 500
+    var max = if (numberOne>numberTwo) numberOne else numberTwo
+    println("Max : $max")
+    //-------------------------------
 }

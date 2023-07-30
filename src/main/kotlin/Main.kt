@@ -152,9 +152,11 @@ fun main() {
     println(digitCounts)
     //------------------------------------
     //List
-    val friendNameList = mutableListOf("Ahmed","Ali","Heba",1)
-    friendNameList[0]="saif"
-    friendNameList.add(1,"zein")
+    //ListOf --> Immutable
+    //mutableListOf --> Mutable List
+    val friendNameList = mutableListOf("Ahmed", "Ali", "Heba")
+    friendNameList[0] = "saif"
+    friendNameList.add(1, "zein")
     println(friendNameList)
     //--------------------------------------
     //for loop
@@ -166,7 +168,17 @@ fun main() {
         println(i)
     }
     //-------------------
-    for (i  in 0.rangeTo(10) step 3){
+    for (i in 0.rangeTo(10) step 3) {
         println(i)
+    }
+    for (i in 0 until friendNameList.size) {
+        println(friendNameList[i])
+    }
+    //------------------------------
+    for (element in friendNameList)
+        println(element)
+    //------------------------------
+    friendNameList.forEach {
+        println(it)
     }
 }

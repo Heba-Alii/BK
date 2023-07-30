@@ -102,4 +102,12 @@ fun main() {
     } else {
         println("$yourWord is not in range")
     }
+    //-----------------------------------
+    var numbers = 0..100 step (5)
+    println("Enter Number from 0 to 100")
+    var youNumber = readln()!!.toInt()
+    if (youNumber in numbers){
+        println("$youNumber in Range")
+    }else
+        println("$youNumber is not in range")
 }

@@ -94,6 +94,7 @@ fun main() {
     }
 //------------------------------------
     var wordRanges = 'a'.rangeTo('m')
+    //or a..m
     println("please enter your word")
     var yourWord = readln()!!.toCharArray()[0]
     if (yourWord in wordRanges) {

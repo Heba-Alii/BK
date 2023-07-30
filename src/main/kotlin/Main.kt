@@ -181,4 +181,17 @@ fun main() {
     friendNameList.forEach {
         println(it)
     }
+    //------------------------------
+    //While Statement
+    var myNum = 2084
+    while (myNum > 2) {
+        println(myNum)
+        myNum /= 2
+    }
+    //----------------------------
+    do {
+        println(myNum)
+        myNum /= 2
+    } while (myNum > 2)
+    //---------------------------
 }

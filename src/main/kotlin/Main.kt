@@ -150,4 +150,23 @@ fun main() {
         else -> null
     }
     println(digitCounts)
+    //------------------------------------
+    //List
+    val friendNameList = mutableListOf("Ahmed","Ali","Heba",1)
+    friendNameList[0]="saif"
+    friendNameList.add(1,"zein")
+    println(friendNameList)
+    //--------------------------------------
+    //for loop
+    for (i in 0..10) {
+        println(i)
+    }
+    //---------------------------
+    for (i in 10.downTo(0) step 2) {
+        println(i)
+    }
+    //-------------------
+    for (i  in 0.rangeTo(10) step 3){
+        println(i)
+    }
 }

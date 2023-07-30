@@ -106,8 +106,48 @@ fun main() {
     var numbers = 0..100 step (5)
     println("Enter Number from 0 to 100")
     var youNumber = readln()!!.toInt()
-    if (youNumber in numbers){
+    if (youNumber in numbers) {
         println("$youNumber in Range")
-    }else
+    } else
         println("$youNumber is not in range")
+    //------------------------------------
+    //When Statement
+    println("Emter any number from 0 to100")
+    var frientCount: Int = readln()!!.toInt()
+    when (frientCount) {
+        in 0..20 -> {
+            println("Lonely")
+        }
+
+        in 20..50 -> {
+            println("Fmily & Friends")
+        }
+
+        in 50..70 -> {
+            println("Social Person")
+        }
+
+        in 70..100 -> {
+            println("Famous Person")
+        }
+    }
+    //----------------------------
+    println("Enter number one or two")
+    var myNumber: Int = readln().toInt()
+    when (myNumber) {
+        1 -> println("One")
+        2 -> println("Two")
+        else -> println("Your Number is $myNumber")
+    }
+    //----------------------------
+    println("Enter any num fron 0 to 999")
+    var anyNumber: Int? = readln().toInt()
+    val digitCounts = when (anyNumber) {
+        !in 20..40 -> "someNumbers"
+        in 1..9 -> "One"
+        in 10..99 -> "Two"
+        in 100..999 -> "Three"
+        else -> null
+    }
+    println(digitCounts)
 }

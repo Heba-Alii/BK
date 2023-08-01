@@ -194,4 +194,13 @@ fun main() {
         myNum /= 2
     } while (myNum > 2)
     //---------------------------
+    //Breaking Loops
+    loop1@ for (i in 1..5) {
+        loop2@ for (j in 1..10) {
+            if (i == 2) break@loop2
+            print("${i * j}\t")
+        }
+        print("\n")
+    }
+
 }

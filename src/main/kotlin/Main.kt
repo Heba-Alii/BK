@@ -1,3 +1,4 @@
+var likeCount = 1
 fun main() {
     var like: Float = 5.2f
     like++
@@ -202,5 +203,19 @@ fun main() {
         }
         print("\n")
     }
+    //----------------------------
+    //functions
+    like()
+    like()
+    disLike()
+    like()
+    println(likeCount)
+}
 
+fun like() {
+    likeCount++
+}
+
+fun disLike() {
+    likeCount--
 }

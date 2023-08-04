@@ -205,11 +205,15 @@ fun main() {
     }
     //----------------------------
     //functions
+    showLikes()
     like()
+    showLikes()
     like()
+    showLikes()
     disLike()
+    showLikes()
     like()
-    println(likeCount)
+    showLikes()
 }
 
 fun like() {
@@ -218,4 +222,12 @@ fun like() {
 
 fun disLike() {
     likeCount--
+}
+
+fun getLikeDetails(): String {
+    return "like= $likeCount"
+}
+
+fun showLikes() {
+    println(getLikeDetails())
 }

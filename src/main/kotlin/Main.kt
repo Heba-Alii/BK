@@ -216,18 +216,25 @@ fun main() {
     showLikes()
 }
 
-fun like() {
-    likeCount++
-}
+//---------------------------------
+//Compact Function
+//fun like() {
+//    likeCount++
+//}
+fun like() = likeCount++
 
-fun disLike() {
-    likeCount--
-}
+//fun disLike() {
+//    likeCount--
+//}
+fun disLike() = likeCount--
+//fun getLikeDetails(): String {
+//    return "like= $likeCount"
+//}
 
-fun getLikeDetails(): String {
-    return "like= $likeCount"
-}
+fun getLikeDetails() = "like = $likeCount"
 
-fun showLikes() {
-    println(getLikeDetails())
-}
+//fun showLikes() {
+//    println(getLikeDetails())
+//}
+fun showLikes() = println(getLikeDetails())
+//--------------------------------------------

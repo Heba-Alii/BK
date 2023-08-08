@@ -1,5 +1,5 @@
-var likeCount = 1
 fun main() {
+    var likeCount = 0
     var like: Float = 5.2f
     like++
     println(like)
@@ -205,15 +205,15 @@ fun main() {
     }
     //----------------------------
     //functions
-    showLikes()
-    like()
-    showLikes()
-    like()
-    showLikes()
-    disLike()
-    showLikes()
-    like()
-    showLikes()
+    showLikes(likeCount)
+    likeCount = like(likeCount)
+    showLikes(likeCount)
+    likeCount = like(likeCount)
+    showLikes(likeCount)
+    likeCount = disLike(likeCount)
+    showLikes(likeCount)
+    likeCount = like(likeCount)
+    showLikes(likeCount)
 }
 
 //---------------------------------
@@ -221,20 +221,24 @@ fun main() {
 //fun like() {
 //    likeCount++
 //}
-fun like() = likeCount++
-
-//fun disLike() {
-//    likeCount--
-//}
-fun disLike() = likeCount--
-//fun getLikeDetails(): String {
-//    return "like= $likeCount"
-//}
-
-fun getLikeDetails() = "like = $likeCount"
-
+//fun like() = likeCount++
+//
+////fun disLike() {
+////    likeCount--
+////}
+//fun disLike() = likeCount--
+////fun getLikeDetails(): String {
+////    return "like= $likeCount"
+////}
 //fun showLikes() {
 //    println(getLikeDetails())
 //}
-fun showLikes() = println(getLikeDetails())
+
 //--------------------------------------------
+//Function Argument
+fun like(oldLikeCount: Int) = oldLikeCount + 1
+
+fun disLike(oldLikeCount: Int) = oldLikeCount - 1
+fun getLikeDetails(likeCount: Int) = "like = $likeCount"
+fun showLikes(likeCount: Int) = println(getLikeDetails(likeCount))
+//----------------------------------------------

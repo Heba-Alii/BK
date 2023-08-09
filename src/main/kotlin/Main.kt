@@ -237,7 +237,6 @@ fun main() {
 //--------------------------------------------
 //Function Argument
 fun like(oldLikeCount: Int) = oldLikeCount + 1
-
 fun disLike(oldLikeCount: Int) = oldLikeCount - 1
 fun getLikeDetails(likeCount: Int) = "like = $likeCount"
 fun showLikes(likeCount: Int) = println(getLikeDetails(likeCount))

@@ -214,6 +214,12 @@ fun main() {
     showLikes(likeCount)
     likeCount = like(likeCount)
     showLikes(likeCount)
+    //-----------------------
+    println("Function (if Even) ${ifEven(5)}")
+    println("Enter Your Age :")
+    println("Function (get Age State) is ${getAgeState(readln().toInt())}")
+    isYounger(22,28)
+   // println("Function (isYounger) ${isYounger(22, 28)}")
 }
 
 //---------------------------------
@@ -240,4 +246,41 @@ fun like(oldLikeCount: Int) = oldLikeCount + 1
 fun disLike(oldLikeCount: Int) = oldLikeCount - 1
 fun getLikeDetails(likeCount: Int) = "like = $likeCount"
 fun showLikes(likeCount: Int) = println(getLikeDetails(likeCount))
+
 //----------------------------------------------
+//Mastring function
+//fun ifEven(number: Int): Boolean {
+//    return if (number % 2 == 0) true else false
+//}
+//OR
+//fun ifEven(number: Int): Boolean {
+//    return number % 2 == 0
+//}
+//OR
+fun ifEven(number: Int) = number % 2 == 0
+
+//------------------------------------------
+fun getAgeState(age: Int) =
+    when (age) {
+        in -1 downTo Int.MIN_VALUE -> "ما جه الدنيا لسه"
+        in 0..4 -> "Baby"
+        in 5..15 -> "Child"
+        in 16..20 -> "Teen"
+        in 21..39 -> "Adult"
+        in 40..59 -> "Middle Age Adult"
+        in 60..120 -> "Old"
+        in 121..Int.MAX_VALUE -> "الله يرحمه"
+        else -> "Wrong Value"
+    }
+
+//--------------------------------------------
+fun isYounger(ageOne: Int, ageTwo: Int) =
+    if (ageOne > ageTwo) {
+        println("$ageOne is Younger")
+    } else if (ageOne == ageTwo) {
+        println("equals")
+    } else {
+        println("$ageTwo is younger")
+    }
+//-------------------------------------
+

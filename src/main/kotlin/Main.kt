@@ -218,8 +218,10 @@ fun main() {
     println("Function (if Even) ${ifEven(5)}")
     println("Enter Your Age :")
     println("Function (get Age State) is ${getAgeState(readln().toInt())}")
-    isYounger(22,28)
-   // println("Function (isYounger) ${isYounger(22, 28)}")
+    isYounger(22, 28)
+    println("Function (ifYounger) ${ifYounger(22, 28)}")
+    println("Function (Say Hello): ${sayHello("Heba")}")
+    println("Function (To Power): ${toPower(4, 2)}")
 }
 
 //---------------------------------
@@ -282,5 +284,19 @@ fun isYounger(ageOne: Int, ageTwo: Int) =
     } else {
         println("$ageTwo is younger")
     }
-//-------------------------------------
 
+//-------------------------------------
+fun ifYounger(ageOne: Int, ageTwo: Int) = ageOne > ageTwo
+
+//--------------------------------------
+fun sayHello(name: String = "My Friend") = "HEllo $name"
+
+//----------------------------------------
+fun toPower(number: Int = 4, power: Int = 3): Int {
+    var result = number
+    for (i in 1 until power) {
+        result *= number
+    }
+    return result
+}
+//--------------------------------------

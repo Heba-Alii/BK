@@ -222,6 +222,9 @@ fun main() {
     println("Function (ifYounger) ${ifYounger(22, 28)}")
     println("Function (Say Hello): ${sayHello("Heba")}")
     println("Function (To Power): ${toPower(4, 2)}")
+    println("Function(Calculate Sum)${calculateSum(1, 2)}")
+    println("Function(Calculate Sum)${calculateSum(1, 2, 3)}")
+    println("Function(Calculate Sum)${calculateSum("1", 2)}")
 }
 
 //---------------------------------
@@ -299,4 +302,10 @@ fun toPower(number: Int = 4, power: Int = 3): Int {
     }
     return result
 }
+
 //--------------------------------------
+//Function OverLoading
+fun calculateSum(num1: Int, num2: Int) = num1 + num2
+fun calculateSum(num1: Int, num2: Int, num3: Int) = num1 + num2 + num3
+fun calculateSum(num1: String, num2: Int) = num1.toInt() + num2
+//----------------------------------------

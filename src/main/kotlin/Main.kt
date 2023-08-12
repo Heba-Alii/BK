@@ -225,6 +225,14 @@ fun main() {
     println("Function(Calculate Sum)${calculateSum(1, 2)}")
     println("Function(Calculate Sum)${calculateSum(1, 2, 3)}")
     println("Function(Calculate Sum)${calculateSum("1", 2)}")
+    // createUser(1, "Heba", 25, "Egypt", "Alexandria")
+    createUser(
+        userAge = 25,
+        userName = "Heba",
+        country = null,
+        city = "Alex",
+        userId = 5
+    )
 
 }
 
@@ -315,5 +323,17 @@ fun toPower(number: Int = 4, power: Int = 3): Int {
 fun calculateSum(num1: Int, num2: Int) = num1 + num2
 fun calculateSum(num1: Int, num2: Int, num3: Int) = num1 + num2 + num3
 fun calculateSum(num1: String, num2: Int) = num1.toInt() + num2
-//----------------------------------------
 
+//----------------------------------------
+//Named Arguments
+fun createUser(userId: Int, userName: String, userAge: Int, country: String?, city: String?) =
+    displayData(userId, userName, userAge, country, city)
+
+fun displayData(userId: Int, userName: String, userAge: Int, country: String?, city: String?) {
+    println(userId)
+    println(userName)
+    println(userAge)
+    println(country)
+    println(city)
+}
+//-------------------------------------

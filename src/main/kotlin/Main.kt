@@ -234,6 +234,8 @@ fun main() {
         userId = 5
     )
 
+    println("Function ( palindrome)${isPalindrome("aabAA")}")
+
 }
 
 //---------------------------------
@@ -336,4 +338,15 @@ fun displayData(userId: Int, userName: String, userAge: Int, country: String?, c
     println(country)
     println(city)
 }
+
 //-------------------------------------
+//Ex --->
+// palindrome.
+fun isPalindrome(text: String): Boolean {
+    var string = StringBuilder(text)
+    var rev = string.reverse().toString()
+    //var res = if (text.equals(rev)) true else false
+    var res = text.equals(rev,ignoreCase = true)
+    return res
+}
+//-------------------------------

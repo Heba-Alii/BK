@@ -225,6 +225,7 @@ fun main() {
     println("Function(Calculate Sum)${calculateSum(1, 2)}")
     println("Function(Calculate Sum)${calculateSum(1, 2, 3)}")
     println("Function(Calculate Sum)${calculateSum("1", 2)}")
+
 }
 
 //---------------------------------
@@ -265,6 +266,12 @@ fun showLikes(likeCount: Int) = println(getLikeDetails(likeCount))
 fun ifEven(number: Int) = number % 2 == 0
 
 //------------------------------------------
+/**
+ * get Age State Function : this fun return which age state that the person entered his/her age
+ *@param age this is the age of any person and should be 0 or larger integer
+ * @return a string represent the age stage of person
+ * @see isYounger you can use it to compare ages
+ */
 fun getAgeState(age: Int) =
     when (age) {
         in -1 downTo Int.MIN_VALUE -> "ما جه الدنيا لسه"
@@ -309,3 +316,4 @@ fun calculateSum(num1: Int, num2: Int) = num1 + num2
 fun calculateSum(num1: Int, num2: Int, num3: Int) = num1 + num2 + num3
 fun calculateSum(num1: String, num2: Int) = num1.toInt() + num2
 //----------------------------------------
+

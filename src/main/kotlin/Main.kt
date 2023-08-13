@@ -233,11 +233,11 @@ fun main() {
         city = "Alex",
         userId = 5
     )
-
     println("Function ( palindrome)${isPalindrome("aabAA")}")
-
+    var myFriends = listOf<String>("Heba", "Ahmed", "Ali", "Samia", "Amira")
+    println("Function(get Friends Details , ${getFriendsDetails(myFriends)}")
+    println("Function (getFriendsNameStartWithA${getFriendsNameStartWithA(myFriends, 'A')}")
 }
-
 //---------------------------------
 //Compact Function
 //fun like() {
@@ -346,7 +346,40 @@ fun isPalindrome(text: String): Boolean {
     var string = StringBuilder(text)
     var rev = string.reverse().toString()
     //var res = if (text.equals(rev)) true else false
-    var res = text.equals(rev,ignoreCase = true)
+    var res = text.equals(rev, ignoreCase = true)
     return res
 }
+
 //-------------------------------
+//Function With List
+//return count of friends formatted in string
+fun getFriendsDetails(listOfFriends: List<String>) = "You have ${listOfFriends.size} friend"
+
+//fun getFriendsNameStartWithA(listOfMyFriends: List<String>, firstCharacter: Char): List<String> {
+//var filteredFriendsList = mutableListOf<String>()
+//First Answer
+//    for (i in 0 until listOfMyFriends.size) {
+//        if (listOfMyFriends[i].get(0) == firstCharacter) {
+//            filteredFriendsList.add(listOfMyFriends[i])
+//        }
+//    }
+//--------------------------------------
+//Second Answer
+//    for (friend in listOfMyFriends) {
+//        if (friend.get(0) == firstCharacter) {
+//            filteredFriendsList.add(friend)
+//        }
+//    }
+//-------------------------------------
+//Third Answer(For Each)
+//    listOfMyFriends.forEach {
+//        if (it.get(0) == firstCharacter) {
+//            filteredFriendsList.add(it)
+//        }
+//    }
+//    return filteredFriendsList
+//-------------------------------------
+//Fourth Answer( Filter)
+fun getFriendsNameStartWithA(listOfMyFriends: List<String>, firstCharacter: Char) =
+    listOfMyFriends.filter { it.get(0) == firstCharacter }
+//--------------------------------------

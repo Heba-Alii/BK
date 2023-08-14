@@ -239,6 +239,8 @@ fun main() {
     println("Function (getFriendsNameStartWithA${getFriendsNameStartWithA(myFriends, 'A')}")
     var products = listOf<Int>(5, 4, -3, 9, 2, 1)
     println("Function (solution)${solution(products)}")
+    var statues = listOf<Int>(6, 2, 3, 8)
+    println("Function(Statues)${statues(statues)}")
 }
 //---------------------------------
 //Compact Function
@@ -397,4 +399,20 @@ fun solution(inputArray: List<Int>): Int {
     }
     return maxProduct
 }
+
 //---------------------------------------
+//Statues Example
+fun statues(statueList: List<Int>): Int {
+//    if (statueList.isEmpty()){
+//        return 0
+//    }
+    var sortedStatues = statueList.sorted()
+    var additionalStatues = 0
+    for (i in 1 until sortedStatues.size) {
+        var minusStatues = sortedStatues[i] - sortedStatues[i - 1] - 1
+        if (minusStatues > 0) {
+            additionalStatues += minusStatues
+        }
+    }
+    return additionalStatues
+}

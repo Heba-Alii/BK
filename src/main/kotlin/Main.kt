@@ -274,7 +274,6 @@ fun showLikes(likeCount: Int) = println(getLikeDetails(likeCount))
 //}
 //OR
 fun ifEven(number: Int) = number % 2 == 0
-
 //------------------------------------------
 /**
  * get Age State Function : this fun return which age state that the person entered his/her age
@@ -294,7 +293,6 @@ fun getAgeState(age: Int) =
         in 121..Int.MAX_VALUE -> "الله يرحمه"
         else -> "Wrong Value"
     }
-
 //--------------------------------------------
 fun isYounger(ageOne: Int, ageTwo: Int) =
     if (ageOne > ageTwo) {
@@ -338,7 +336,6 @@ fun displayData(userId: Int, userName: String, userAge: Int, country: String?, c
     println(country)
     println(city)
 }
-
 //-------------------------------------
 //Ex --->
 // palindrome.
@@ -379,7 +376,7 @@ fun getFriendsDetails(listOfFriends: List<String>) = "You have ${listOfFriends.s
 //    }
 //    return filteredFriendsList
 //-------------------------------------
-//Fourth Answer( Filter)
+//Fourth Answer( Filter) :(Model Answer)
 fun getFriendsNameStartWithA(listOfMyFriends: List<String>, firstCharacter: Char) =
     listOfMyFriends.filter { it.get(0) == firstCharacter }
 //--------------------------------------

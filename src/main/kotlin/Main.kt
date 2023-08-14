@@ -237,6 +237,8 @@ fun main() {
     var myFriends = listOf<String>("Heba", "Ahmed", "Ali", "Samia", "Amira")
     println("Function(get Friends Details , ${getFriendsDetails(myFriends)}")
     println("Function (getFriendsNameStartWithA${getFriendsNameStartWithA(myFriends, 'A')}")
+    var products = listOf<Int>(5, 4, -3, 9, 2, 1)
+    println("Function (solution)${solution(products)}")
 }
 //---------------------------------
 //Compact Function
@@ -293,6 +295,7 @@ fun getAgeState(age: Int) =
         in 121..Int.MAX_VALUE -> "الله يرحمه"
         else -> "Wrong Value"
     }
+
 //--------------------------------------------
 fun isYounger(ageOne: Int, ageTwo: Int) =
     if (ageOne > ageTwo) {
@@ -336,6 +339,7 @@ fun displayData(userId: Int, userName: String, userAge: Int, country: String?, c
     println(country)
     println(city)
 }
+
 //-------------------------------------
 //Ex --->
 // palindrome.
@@ -379,4 +383,18 @@ fun getFriendsDetails(listOfFriends: List<String>) = "You have ${listOfFriends.s
 //Fourth Answer( Filter) :(Model Answer)
 fun getFriendsNameStartWithA(listOfMyFriends: List<String>, firstCharacter: Char) =
     listOfMyFriends.filter { it.get(0) == firstCharacter }
+
 //--------------------------------------
+//EX:
+//Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
+fun solution(inputArray: List<Int>): Int {
+    var maxProduct = Int.MIN_VALUE
+    for (i in 0 until inputArray.size - 1) {
+        var product = inputArray[i] * inputArray[i + 1]
+        if (product > maxProduct) {
+            maxProduct = product
+        }
+    }
+    return maxProduct
+}
+//---------------------------------------

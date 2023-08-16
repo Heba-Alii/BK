@@ -241,6 +241,9 @@ fun main() {
     println("Function (solution)${solution(products)}")
     var statues = listOf<Int>(6, 2, 3, 8)
     println("Function(Statues)${statues(statues)}")
+    println("Lambda Function ${myFunction(2, 6)}")
+    println("Lambda Function 2=${myFunction2(5, 5)}")
+    myFuction3()
 }
 //---------------------------------
 //Compact Function
@@ -416,3 +419,22 @@ fun statues(statueList: List<Int>): Int {
     }
     return additionalStatues
 }
+
+//------------------------------------------
+//Lambdas
+//هي عباره عن فانكشن ليس لها اسم واخر سطر منها هو الreturn
+val myFunction = { no1: Int, no2: Int ->
+    no1 + no2
+}
+
+//or
+val myFunction2: (Int, Int) -> Int = { no1, no2 ->
+    no1 + no2
+}
+
+//لو مش بتاخد parameters ولا بتؤجع حاجه
+//Unit معناها مش بترجع حاجه
+val myFuction3: () -> Unit = {
+    print("Hello Lambda")
+}
+//-----------------------------------

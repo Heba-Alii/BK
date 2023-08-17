@@ -244,6 +244,10 @@ fun main() {
     println("Lambda Function ${myFunction(2, 6)}")
     println("Lambda Function 2=${myFunction2(5, 5)}")
     myFuction3()
+    //val finalResult = doOperation(5, 5, { no1: Int, no2: Int -> no1 * no2 })
+    val finalResult = doOperation(5, 5, ::sum)
+
+    println(finalResult)
 }
 //---------------------------------
 //Compact Function
@@ -437,4 +441,15 @@ val myFunction2: (Int, Int) -> Int = { no1, no2 ->
 val myFuction3: () -> Unit = {
     print("Hello Lambda")
 }
+
 //-----------------------------------
+//Higher Order Function
+fun doOperation(no1: Int, no2: Int, myFunction: (Int, Int) -> Int): Int {
+    val result = myFunction(no1, no2)
+    return result
+}
+
+fun sum(num1: Int, num2: Int) = num1 * num2
+//val mutiply: (Int, Int) -> Int = { no1, no2 ->
+//    no1 * no2
+//}

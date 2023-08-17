@@ -246,8 +246,10 @@ fun main() {
     myFuction3()
     //val finalResult = doOperation(5, 5, { no1: Int, no2: Int -> no1 * no2 })
     val finalResult = doOperation(5, 5, ::sum)
-
     println(finalResult)
+    var solution= mutableListOf<Int>(1,2,3,2,2)
+   val re=sol(solution)
+    println(re)
 }
 //---------------------------------
 //Compact Function
@@ -450,6 +452,29 @@ fun doOperation(no1: Int, no2: Int, myFunction: (Int, Int) -> Int): Int {
 }
 
 fun sum(num1: Int, num2: Int) = num1 * num2
+
 //val mutiply: (Int, Int) -> Int = { no1, no2 ->
 //    no1 * no2
 //}
+//------------------------------------
+//sequence of integers as an array
+fun sol(sequence: MutableList<Int>): Boolean {
+    var count = 0
+
+    for (i in 1 until sequence.size) {
+        if (sequence[i] <= sequence[i - 1]) {
+            count++
+
+            if (count > 1) {
+                return false
+            }
+            if (i == 1 || sequence[i] > sequence[i - 2]) {
+                sequence[i - 1] = sequence[i]
+            } else {
+                sequence[i] = sequence[i - 1]
+            }
+        }
+    }
+    return true
+}
+//-------------------------------------

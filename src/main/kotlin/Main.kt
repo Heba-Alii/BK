@@ -259,7 +259,6 @@ fun main() {
     myPost.likes()
     postOfMyFriend.likes()
     println("my Post Likes =${myPost.likesCount} && my Friend Post Likes = ${postOfMyFriend.likesCount}")
-
 }
 //---------------------------------
 //Compact Function
@@ -486,6 +485,29 @@ fun sequences(sequence: MutableList<Int>): Boolean {
     }
     return true
 }
+
 //-------------------------------------
+//Matrix Example
+fun matrixSolution(matrix: MutableList<MutableList<Int>>): Int {
+    val rows = matrix.size
+    val cols = matrix[0].size
+    var totalSum = 0
+
+    for (col in 0 until cols) {
+        var hauntedEncountered = false
+        for (row in 0 until rows) {
+            if (hauntedEncountered) {
+                matrix[row][col] = 0
+            } else {
+                totalSum += matrix[row][col]
+            }
+            if (matrix[row][col] == 0) {
+                hauntedEncountered = true
+            }
+        }
+    }
+
+    return totalSum
+}
 
 

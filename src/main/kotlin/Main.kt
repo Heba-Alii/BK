@@ -1,3 +1,5 @@
+import model.Post
+
 fun main() {
     var likeCount = 0
     var like: Float = 5.2f
@@ -247,9 +249,17 @@ fun main() {
     //val finalResult = doOperation(5, 5, { no1: Int, no2: Int -> no1 * no2 })
     val finalResult = doOperation(5, 5, ::sum)
     println(finalResult)
-    var solution= mutableListOf<Int>(1,2,3,2,2)
-   val re=sol(solution)
+    var solution = mutableListOf<Int>(1, 2, 3, 2, 2)
+    val re = sequences(solution)
     println(re)
+    var myPost = Post()
+    var postOfMyFriend = Post()
+    println("my Post Likes =${myPost.likesCount} && my Friend Post Likes = ${postOfMyFriend.likesCount}")
+    myPost.likes()
+    myPost.likes()
+    postOfMyFriend.likes()
+    println("my Post Likes =${myPost.likesCount} && my Friend Post Likes = ${postOfMyFriend.likesCount}")
+
 }
 //---------------------------------
 //Compact Function
@@ -458,13 +468,12 @@ fun sum(num1: Int, num2: Int) = num1 * num2
 //}
 //------------------------------------
 //sequence of integers as an array
-fun sol(sequence: MutableList<Int>): Boolean {
+fun sequences(sequence: MutableList<Int>): Boolean {
     var count = 0
 
     for (i in 1 until sequence.size) {
         if (sequence[i] <= sequence[i - 1]) {
             count++
-
             if (count > 1) {
                 return false
             }
@@ -478,3 +487,5 @@ fun sol(sequence: MutableList<Int>): Boolean {
     return true
 }
 //-------------------------------------
+
+

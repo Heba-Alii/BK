@@ -1,4 +1,6 @@
 import model.Post
+import model.User
+import javax.jws.soap.SOAPBinding.Use
 
 fun main() {
     var likeCount = 0
@@ -259,6 +261,8 @@ fun main() {
     myPost.likes()
     postOfMyFriend.likes()
     println("my Post Likes =${myPost.likesCount} && my Friend Post Likes = ${postOfMyFriend.likesCount}")
+    var firstUser = User("Heba", 25, 1997)
+    firstUser.printAge()
 }
 //---------------------------------
 //Compact Function
@@ -509,5 +513,4 @@ fun matrixSolution(matrix: MutableList<MutableList<Int>>): Int {
 
     return totalSum
 }
-
-
+//-----------------------------------

@@ -261,8 +261,9 @@ fun main() {
     myPost.likes()
     postOfMyFriend.likes()
     println("my Post Likes =${myPost.likesCount} && my Friend Post Likes = ${postOfMyFriend.likesCount}")
-    var firstUser = User("Heba", 1997)
+    var firstUser = User(yearOfBirth = 1997, userName = "Heba", city = "Alexandria")
     println("Your Current Age = ${firstUser.age}")
+    println("Your Current Age = ${firstUser.userName}}")
 }
 //---------------------------------
 //Compact Function

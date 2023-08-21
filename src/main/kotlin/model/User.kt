@@ -27,9 +27,12 @@ import CURRENT_YEAR
 //        age = CURRENT_YEAR - yearOfBirth
 //    }
 //}
-class User(var userName: String, var yearOfBirth: Int) {
-    var age: Int
+class User(
+    var userName: String,
+    var yearOfBirth: Int = 1990,
     var city: String? = null
+) {
+    var age: Int
 
     init {
         age = CURRENT_YEAR - yearOfBirth

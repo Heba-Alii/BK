@@ -33,6 +33,20 @@ class User(
     var city: String? = null
 ) {
     var age: Int
+        //Access Modifier and Setter & Getter
+        //  get() = field
+        // if (field in 1..1999) {
+//   field = value
+//     } else {
+//      field = 0
+//     }
+        //-------------------
+//        set(value) {
+//
+//            field = if (value in 1..1999) value else 0
+//
+//        }
+        private set
 
     init {
         age = CURRENT_YEAR - yearOfBirth

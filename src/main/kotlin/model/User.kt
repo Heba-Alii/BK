@@ -50,5 +50,10 @@ class User(
 
     init {
         age = CURRENT_YEAR - yearOfBirth
+        totaluserCount++
+    }
+//companion object
+    companion object {
+        var totaluserCount = 0
     }
 }

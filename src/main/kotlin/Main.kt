@@ -262,7 +262,9 @@ fun main() {
     postOfMyFriend.likes()
     println("my Post Likes =${myPost.likesCount} && my Friend Post Likes = ${postOfMyFriend.likesCount}")
     var firstUser = User(yearOfBirth = 1997, userName = "Heba", city = "Alexandria")
+    var secondUser = User(yearOfBirth = 1994, userName = "Ahmed", city = "Alexandria")
     //firstUser.age=3000
+    println("Total Users  =${User.totaluserCount}")
     println("Your Current Age = ${firstUser.age}")
     println("Your Name = ${firstUser.userName}}")
 }

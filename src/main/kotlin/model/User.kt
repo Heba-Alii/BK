@@ -52,7 +52,7 @@ class User(
         age = CURRENT_YEAR - yearOfBirth
         totaluserCount++
     }
-//companion object
+//companion object or static in all language
     companion object {
         var totaluserCount = 0
     }

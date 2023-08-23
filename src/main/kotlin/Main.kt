@@ -1,4 +1,5 @@
 import model.Post
+import model.Settings
 import model.User
 import javax.jws.soap.SOAPBinding.Use
 
@@ -267,6 +268,11 @@ fun main() {
     println("Total Users  =${User.totaluserCount}")
     println("Your Current Age = ${firstUser.age}")
     println("Your Name = ${firstUser.userName}}")
+    //لا احتاج الي انشاء اوبجكت من نوع Settings لانه Singleton
+    println(Settings.language)
+    Settings.changeLanguageToEnglish()
+    println(Settings.language)
+    Settings.logOut(secondUser)
 }
 //---------------------------------
 //Compact Function

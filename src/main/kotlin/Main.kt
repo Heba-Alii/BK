@@ -1,3 +1,5 @@
+import javafx.geometry.Pos
+import model.ImagePosts
 import model.Post
 import model.Settings
 import model.User
@@ -255,8 +257,8 @@ fun main() {
     var solution = mutableListOf<Int>(1, 2, 3, 2, 2)
     val re = sequences(solution)
     println(re)
-    var myPost = Post()
-    var postOfMyFriend = Post()
+    var myPost = Post("Heba", "Hello World")
+    var postOfMyFriend = Post("Heba", "Hello World")
     println("my Post Likes =${myPost.likesCount} && my Friend Post Likes = ${postOfMyFriend.likesCount}")
     myPost.likes()
     myPost.likes()
@@ -273,6 +275,15 @@ fun main() {
     Settings.changeLanguageToEnglish()
     println(Settings.language)
     Settings.logOut(secondUser)
+    var posts = ImagePosts("Heba", "Hello World")
+    posts.likes()
+    posts.likes()
+    println("you hava ${posts.likesCount} Likes")
+    var newPost = Post("Heba", "Hello World")
+    newPost.addComment("What")
+    newPost.addComment("Wow")
+    newPost.addComment("ok")
+    println("You Have ${newPost.commentsCount} Comment")
 }
 //---------------------------------
 //Compact Function
@@ -300,7 +311,7 @@ fun getLikeDetails(likeCount: Int) = "like = $likeCount"
 fun showLikes(likeCount: Int) = println(getLikeDetails(likeCount))
 
 //----------------------------------------------
-//Mastring function
+//Mastering function
 //fun ifEven(number: Int): Boolean {
 //    return if (number % 2 == 0) true else false
 //}

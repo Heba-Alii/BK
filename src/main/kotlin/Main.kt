@@ -275,6 +275,8 @@ fun main() {
     var posts = ImagePosts("Heba", "Hello World")
     posts.likes()
     posts.likes()
+    posts.imageLink = "Heba Ali"
+    posts.printImageLink()
     println("you hava ${posts.likesCount} Likes")
     var newPost = Post("Heba", "Hello World")
     newPost.addComment("What")
@@ -283,6 +285,8 @@ fun main() {
     println("You Have ${newPost.commentsCount} Comment")
     var postThree = VideoPostHD("heba", "Hello")
     postThree.toString()
+    var myName: String = "Heba Ali"
+    myName.printTriple()
 }
 //---------------------------------
 //Compact Function
@@ -533,4 +537,16 @@ fun matrixSolution(matrix: MutableList<MutableList<Int>>): Int {
 
     return totalSum
 }
+
 //-----------------------------------
+//Extension Function
+fun String.printTriple() {
+    for (i in 1..3) {
+        println(this)
+    }
+}
+
+fun ImagePosts.printImageLink() {
+    println(this.imageLink)
+}
+//--------------------------------

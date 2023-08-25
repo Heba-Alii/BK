@@ -277,7 +277,7 @@ fun main() {
     posts.likes()
     posts.likes()
     posts.imageLink = "Heba Ali"
-    posts.editPost()
+   // posts.editPost()
     posts.printImageLink()
     println("you hava ${posts.likesCount} Likes")
 
@@ -292,7 +292,7 @@ fun main() {
     postThree.toString()
     var myName: String = "Heba Ali"
     myName.printTriple()
-    postThree.editPost()
+    //postThree.editPost()
 }
 //---------------------------------
 //Compact Function

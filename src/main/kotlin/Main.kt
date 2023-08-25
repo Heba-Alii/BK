@@ -1,8 +1,5 @@
 import javafx.geometry.Pos
-import model.ImagePosts
-import model.Post
-import model.Settings
-import model.User
+import model.*
 import javax.jws.soap.SOAPBinding.Use
 
 fun main() {
@@ -284,6 +281,8 @@ fun main() {
     newPost.addComment("Wow")
     newPost.addComment("ok")
     println("You Have ${newPost.commentsCount} Comment")
+    var postThree = VideoPostHD("heba", "Hello")
+    postThree.toString()
 }
 //---------------------------------
 //Compact Function

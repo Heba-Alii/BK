@@ -272,21 +272,27 @@ fun main() {
     Settings.changeLanguageToEnglish()
     println(Settings.language)
     Settings.logOut(secondUser)
+
     var posts = ImagePosts("Heba", "Hello World")
     posts.likes()
     posts.likes()
     posts.imageLink = "Heba Ali"
+    posts.editPost()
     posts.printImageLink()
     println("you hava ${posts.likesCount} Likes")
+
     var newPost = Post("Heba", "Hello World")
     newPost.addComment("What")
     newPost.addComment("Wow")
     newPost.addComment("ok")
     println("You Have ${newPost.commentsCount} Comment")
+    newPost.editPost()
+
     var postThree = VideoPostHD("heba", "Hello")
     postThree.toString()
     var myName: String = "Heba Ali"
     myName.printTriple()
+    postThree.editPost()
 }
 //---------------------------------
 //Compact Function

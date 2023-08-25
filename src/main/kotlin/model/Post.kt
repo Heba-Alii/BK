@@ -8,7 +8,7 @@ open class Post(var userName: String, var content: String) {
         private set
     var commentsCount: Int = 0
         private set
-        get()=comments.size
+        get() = comments.size
 
     fun likes() {
         likesCount++
@@ -19,4 +19,6 @@ open class Post(var userName: String, var content: String) {
         comments.add(comment)
 
     }
+//Override Function
+    open fun editPost() = println("Please Enter a new post")
 }

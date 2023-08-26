@@ -302,6 +302,13 @@ fun main() {
     listsOfPost.add(post1)
     listsOfPost.add(post2)
     println(listsOfPost.size)
+    //Type casting
+    var post_1:ImagePosts= ImagePosts("Heba","Hello")
+    var post_2:Post= Post("Heba","Hello")
+    post_1.imageLink="WWW.heba.com"
+    post_2.likesCount
+    printImageLink(post_1)
+    printImageLink(post_2)
 }
 //---------------------------------
 //Compact Function
@@ -569,4 +576,19 @@ fun ImagePosts.printImageLink() {
 //The Beautiful of Polymorphism
 fun printPostsDetails(mPost: BasePost) {
     println(mPost.content)
+}
+//---------------------------------
+//Type casting
+fun printImageLink(mPost:BasePost){
+    when(mPost){
+        is ImagePosts->{
+            println(mPost.imageLink)
+        }
+        is VideoPostHD->{
+            println(mPost.videoLink1080)
+        }
+        is Post->{
+            println("No Link")
+        }
+    }
 }

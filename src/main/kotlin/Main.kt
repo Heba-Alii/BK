@@ -277,7 +277,7 @@ fun main() {
     posts.likes()
     posts.likes()
     posts.imageLink = "Heba Ali"
-   // posts.editPost()
+    // posts.editPost()
     posts.printImageLink()
     println("you hava ${posts.likesCount} Likes")
 
@@ -293,6 +293,15 @@ fun main() {
     var myName: String = "Heba Ali"
     myName.printTriple()
     //postThree.editPost()
+    //The Beautiful of Polymorphism
+    var post1: ImagePosts = ImagePosts("Heba", "HelloWorld")
+    var post2: VideoPostHD = VideoPostHD("Ali", "Watch this")
+    printPostsDetails(post1)
+    printPostsDetails(post2)
+    var listsOfPost = mutableListOf<BasePost>()
+    listsOfPost.add(post1)
+    listsOfPost.add(post2)
+    println(listsOfPost.size)
 }
 //---------------------------------
 //Compact Function
@@ -555,4 +564,9 @@ fun String.printTriple() {
 fun ImagePosts.printImageLink() {
     println(this.imageLink)
 }
+
 //--------------------------------
+//The Beautiful of Polymorphism
+fun printPostsDetails(mPost: BasePost) {
+    println(mPost.content)
+}

@@ -1,3 +1,4 @@
+import interfaces.EditablePost
 import javafx.geometry.Pos
 import model.*
 import javax.jws.soap.SOAPBinding.Use
@@ -303,12 +304,14 @@ fun main() {
     listsOfPost.add(post2)
     println(listsOfPost.size)
     //Type casting
-    var post_1:ImagePosts= ImagePosts("Heba","Hello")
-    var post_2:Post= Post("Heba","Hello")
-    post_1.imageLink="WWW.heba.com"
+    var post_1: ImagePosts = ImagePosts("Heba", "Hello")
+    var post_2: Post = Post("Heba", "Hello")
+    post_1.imageLink = "WWW.heba.com"
     post_2.likesCount
     printImageLink(post_1)
     printImageLink(post_2)
+    //interface
+   editPosts(post_2)
 }
 //---------------------------------
 //Compact Function
@@ -577,19 +580,27 @@ fun ImagePosts.printImageLink() {
 fun printPostsDetails(mPost: BasePost) {
     println(mPost.content)
 }
+
 //---------------------------------
 //Type casting
-fun printImageLink(mPost:BasePost){
-    when(mPost){
-        is ImagePosts->{
+fun printImageLink(mPost: BasePost) {
+    when (mPost) {
+        is ImagePosts -> {
             println(mPost.imageLink)
         }
-        is VideoPostHD->{
+
+        is VideoPostHD -> {
             println(mPost.videoLink1080)
         }
-        is Post->{
+
+        is Post -> {
             println("No Link")
         }
     }
 }
+
 //------------------------------------
+//Interface
+fun editPosts(editablePost: EditablePost) {
+
+}

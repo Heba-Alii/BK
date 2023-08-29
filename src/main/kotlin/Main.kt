@@ -311,7 +311,29 @@ fun main() {
     printImageLink(post_1)
     printImageLink(post_2)
     //interface
-   editPosts(post_2)
+    editPosts(post_2)
+    //Anonymous Object
+//    object:EditablePost{
+//        override fun edit() {
+//        }
+//    }
+    val myEditableObject = object : EditablePost {
+        override fun edit() {
+        }
+    }
+    //OR
+    editPosts(myEditableObject)
+    editPosts(object : EditablePost {
+        override fun edit() {
+        }
+    })
+    //data class
+    //تصنع override لل fun مباشرة
+    var user1 = User("Heba", 1997, "Alex")
+    var user2 = User("Ahmed", 2003, "Alex")
+    var user3 = User("Heba", 1997, "Alex")
+    println(user1.toString())
+    println(user1.equals(user3))
 }
 //---------------------------------
 //Compact Function
@@ -602,5 +624,5 @@ fun printImageLink(mPost: BasePost) {
 //------------------------------------
 //Interface
 fun editPosts(editablePost: EditablePost) {
-
+    println("This post is editable")
 }

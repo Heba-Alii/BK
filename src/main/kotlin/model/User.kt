@@ -27,7 +27,7 @@ import CURRENT_YEAR
 //        age = CURRENT_YEAR - yearOfBirth
 //    }
 //}
-class User(
+data class User(
     var userName: String,
     var yearOfBirth: Int = 1990,
     var city: String? = null
@@ -52,7 +52,8 @@ class User(
         age = CURRENT_YEAR - yearOfBirth
         totaluserCount++
     }
-//companion object or static in all language
+
+    //companion object or static in all language
     companion object {
         var totaluserCount = 0
     }

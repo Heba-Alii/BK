@@ -1,27 +1,32 @@
 package model
 
+import enumuration.Theme
+import org.intellij.lang.annotations.Language
+
+//Singleton
+//Enum
 object Settings {
-    var language: String = "Arabic"
+    var language: enumuration.Language = enumuration.Language.ARABIC
         private set
-    var theme: String = "Dark"
+    var theme: Theme = Theme.DARK
         private set
 
     fun logOut(user: User) =
         println("User (${user.userName}) logout")
 
     fun changeThemeToLight() {
-        theme = "Light"
+        theme = Theme.LIGHT
     }
 
     fun changeThemeToDark() {
-        theme = "Dark"
+        theme = Theme.DARK
     }
 
     fun changeLanguageToEnglish() {
-        language = "English"
+        language = enumuration.Language.ENGLISH
     }
 
     fun changeLanguageToArabic() {
-        language = "Arabic"
+        language = enumuration.Language.ARABIC
     }
 }

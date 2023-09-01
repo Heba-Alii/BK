@@ -312,6 +312,7 @@ fun main() {
     printImageLink(post_2)
     //interface
     editPosts(post_2)
+
     //Anonymous Object
 //    object:EditablePost{
 //        override fun edit() {
@@ -334,6 +335,9 @@ fun main() {
     var user3 = User("Heba", 1997, "Alex")
     println(user1.toString())
     println(user1.equals(user3))
+    //Sealed Class
+    var myStatus = Success(listOf(post1))
+    getStatusType(myStatus)
 }
 //---------------------------------
 //Compact Function
@@ -625,4 +629,15 @@ fun printImageLink(mPost: BasePost) {
 //Interface
 fun editPosts(editablePost: EditablePost) {
     println("This post is editable")
+}
+
+//------------------------------------
+//Sealed Class
+fun getStatusType(status: Status): String {
+    return when (status) {
+        is Fail -> "fail"
+        is Loading -> "Loading"
+        is Success -> status.list.toString()
+    }
+
 }

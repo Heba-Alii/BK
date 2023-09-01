@@ -338,6 +338,11 @@ fun main() {
     //Sealed Class
     var myStatus = Success(listOf(post1))
     getStatusType(myStatus)
+    //Inner class
+    var outerPost = Post("Heba", "Hello Outer class")
+    println(outerPost.postHeader)
+    outerPost.InnerPost().innerPostFun()
+    println(outerPost.postHeader)
 }
 //---------------------------------
 //Compact Function

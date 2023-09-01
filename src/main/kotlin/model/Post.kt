@@ -10,4 +10,14 @@ open class Post(userName: String, content: String) : BasePost(userName, content)
     override fun edit() {
 
     }
+
+    var postHeader: String = "Header In Outer Class"
+
+    //Nested or Inner class
+    inner class InnerPost {
+        fun innerPostFun() {
+            println("Hello Inside")
+            postHeader = "Header in inner class"
+        }
+    }
 }

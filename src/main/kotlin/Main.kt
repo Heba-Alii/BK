@@ -1,6 +1,7 @@
 import interfaces.EditablePost
 import javafx.geometry.Pos
 import model.*
+import java.util.Date
 import javax.jws.soap.SOAPBinding.Use
 
 fun main() {
@@ -343,6 +344,11 @@ fun main() {
     println(outerPost.postHeader)
     outerPost.InnerPost().innerPostFun()
     println(outerPost.postHeader)
+    //Use Java In Kotlin
+    val date = Date()
+    println(date)
+    val test = JavaTest("Heba")
+    println(test.name)
 }
 //---------------------------------
 //Compact Function

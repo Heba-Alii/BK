@@ -1,4 +1,5 @@
 import interfaces.EditablePost
+import interfaces.Listener
 import javafx.geometry.Pos
 import model.*
 import java.util.Date
@@ -349,6 +350,24 @@ fun main() {
     println(date)
     val test = JavaTest("Heba")
     println(test.name)
+    //SAM
+    //First Way
+    val image = Image()
+    val control = Controller()
+    image.setOnTouch(control)
+    //second Way
+    //Anonymous object
+    image.setOnTouch(object : Listener {
+        override fun onTouch() {
+            TODO("Not yet implemented")
+        }
+
+    })
+    //Third Way (Single Abstract Method)SAM
+    //Lambda and higher order function
+    image.setOnTouch {
+        //ImplementFunction
+    }
 }
 //---------------------------------
 //Compact Function

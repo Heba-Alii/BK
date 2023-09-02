@@ -361,7 +361,6 @@ fun main() {
         override fun onTouch() {
             TODO("Not yet implemented")
         }
-
     })
     //Third Way (Single Abstract Method)SAM
     //Lambda and higher order function

@@ -367,6 +367,12 @@ fun main() {
     image.setOnTouch {
         //ImplementFunction
     }
+    //Generic Functions<T>
+    printTwice<Int>(5)
+    printTwice<String>("Hello")
+    //OR
+    printTwice(8)
+    printTwice("Hello")
 }
 //---------------------------------
 //Compact Function
@@ -670,3 +676,23 @@ fun getStatusType(status: Status): String {
     }
 
 }
+
+//-------------------------------
+//Generic Functions <T>
+//fun printTwice(x: Int) {
+//    for (i in 1..2) {
+//        println(x)
+//    }
+//}
+//
+//fun printTwice(x: String) {
+//    for (i in 1..2) {
+//        println(x)
+//    }
+//}
+fun <T> printTwice(x: T) {
+    for (i in 1..2) {
+        println(x)
+    }
+}
+//----------------------------

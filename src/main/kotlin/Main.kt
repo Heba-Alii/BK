@@ -375,6 +375,8 @@ fun main() {
     printTwice(8)
     printTwice("Hello")
     println(pickRandom("Heba", 5, 5.55))
+    //Multi Types in generic function
+    foo("Heba", 9)
 }
 //---------------------------------
 //Compact Function
@@ -706,4 +708,9 @@ fun <T> pickRandom(a: T, b: T, c: T): T {
         else -> c
     }
 }
+
 //----------------------------
+//Multi Types in generic function
+fun <T, V> foo(a: T, b: V) {
+    println(a.toString() + b.toString())
+}

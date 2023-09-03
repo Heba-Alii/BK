@@ -4,6 +4,7 @@ import javafx.geometry.Pos
 import model.*
 import java.util.Date
 import javax.jws.soap.SOAPBinding.Use
+import kotlin.random.Random
 
 fun main() {
     var likeCount = 0
@@ -373,6 +374,7 @@ fun main() {
     //OR
     printTwice(8)
     printTwice("Hello")
+    println(pickRandom("Heba", 5, 5.55))
 }
 //---------------------------------
 //Compact Function
@@ -693,6 +695,15 @@ fun getStatusType(status: Status): String {
 fun <T> printTwice(x: T) {
     for (i in 1..2) {
         println(x)
+    }
+}
+
+fun <T> pickRandom(a: T, b: T, c: T): T {
+    val random = Random.nextInt(3)
+    return when (random) {
+        0 -> a
+        1 -> b
+        else -> c
     }
 }
 //----------------------------

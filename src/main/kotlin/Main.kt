@@ -378,9 +378,12 @@ fun main() {
     //Multi Types in generic function
     foo("Heba", 9)
     //Generic Class
-    val myAttachment = GenericAttachment<String>("Heba")
-    myAttachment.uploadAttachment("aaaa")
+    val myAttachment = GenericAttachment<BaseFile>(BaseFile("Heba"))
+    myAttachment.uploadAttachment(BaseFile("aaaa"))
     myAttachment.downloadAttachment()
+    val videoAttachment = GenericAttachment<VideoFile>(VideoFile("video"))
+    val pdfAttachment = GenericAttachment<PdfFile>(PdfFile("pdf"))
+
 }
 //---------------------------------
 //Compact Function

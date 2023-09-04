@@ -377,6 +377,10 @@ fun main() {
     println(pickRandom("Heba", 5, 5.55))
     //Multi Types in generic function
     foo("Heba", 9)
+    //Generic Class
+    val myAttachment = GenericAttachment<String>("Heba")
+    myAttachment.uploadAttachment("aaaa")
+    myAttachment.downloadAttachment()
 }
 //---------------------------------
 //Compact Function

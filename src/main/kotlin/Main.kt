@@ -381,8 +381,17 @@ fun main() {
     val myAttachment = GenericAttachment<BaseFile>(BaseFile("Heba"))
     myAttachment.uploadAttachment(BaseFile("aaaa"))
     myAttachment.downloadAttachment()
+    //Bounded Generic
     val videoAttachment = GenericAttachment<VideoFile>(VideoFile("video"))
     val pdfAttachment = GenericAttachment<PdfFile>(PdfFile("pdf"))
+    videoAttachment.file.playVideo()
+    //Polymerphism
+    val myAttachmentTwo = AttachmentTwo(VideoFile("heba video"))
+    (myAttachmentTwo.file as VideoFile).playVideo()
+    val myAttachmentTwoPdf = AttachmentTwo(PdfFile("heba pdf"))
+    //لازم اعمل casting
+    (myAttachmentTwoPdf.file as PdfFile).gotoPage(3)
+
 
 }
 //---------------------------------

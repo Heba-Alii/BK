@@ -391,8 +391,6 @@ fun main() {
     val myAttachmentTwoPdf = AttachmentTwo(PdfFile("heba pdf"))
     //لازم اعمل casting
     (myAttachmentTwoPdf.file as PdfFile).gotoPage(3)
-
-
 }
 //---------------------------------
 //Compact Function

@@ -384,13 +384,19 @@ fun main() {
     //Bounded Generic
     val videoAttachment = GenericAttachment<VideoFile>(VideoFile("video"))
     val pdfAttachment = GenericAttachment<PdfFile>(PdfFile("pdf"))
-    videoAttachment.file.playVideo()
+    //videoAttachment.file.playVideo()
     //Polymerphism
     val myAttachmentTwo = AttachmentTwo(VideoFile("heba video"))
     (myAttachmentTwo.file as VideoFile).playVideo()
     val myAttachmentTwoPdf = AttachmentTwo(PdfFile("heba pdf"))
     //لازم اعمل casting
     (myAttachmentTwoPdf.file as PdfFile).gotoPage(3)
+    //Generic out keyword
+    //بسبب كلمة out قدرت امرر ال attach للفانكشن doSomeThing رغم انها بتاخد BaseFile
+    val attach = GenericAttachment<VideoFile>(VideoFile("My File"));
+    val myVideo: BaseFile = VideoFile("name")
+    doSomething(myVideo)
+    doSomeThing(attach)
 }
 //---------------------------------
 //Compact Function
@@ -728,3 +734,15 @@ fun <T> pickRandom(a: T, b: T, c: T): T {
 fun <T, V> foo(a: T, b: V) {
     println(a.toString() + b.toString())
 }
+
+//---------------------------
+//Generic out keyword
+
+fun doSomething(file: BaseFile) {
+
+}
+
+fun doSomeThing(attachment: GenericAttachment<BaseFile>) {
+
+}
+

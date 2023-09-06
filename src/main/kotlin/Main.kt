@@ -397,6 +397,9 @@ fun main() {
     val myVideo: BaseFile = VideoFile("name")
     doSomething(myVideo)
     doSomeThing(attach)
+    //Generic in keyword
+    //val inAttachment: GenericAttachment<VideoFile> = GenericAttachment<BaseFile>(BaseFile("file"))
+    //inDoSOmeThing(inAttachment)
 }
 //---------------------------------
 //Compact Function
@@ -746,3 +749,7 @@ fun doSomeThing(attachment: GenericAttachment<BaseFile>) {
 
 }
 
+//Generic in keyword
+fun inDoSOmeThing(inAttachment: GenericAttachment<VideoFile>) {
+
+}

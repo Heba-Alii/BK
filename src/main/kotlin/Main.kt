@@ -400,6 +400,16 @@ fun main() {
     //Generic in keyword
     //val inAttachment: GenericAttachment<VideoFile> = GenericAttachment<BaseFile>(BaseFile("file"))
     //inDoSOmeThing(inAttachment)
+
+
+    //Standard Library Scope Function(Apply)
+    var comment = Comment().apply {
+        likeCount
+        disLikeCount
+        time=5
+        like()
+        disLike()
+    }
 }
 //---------------------------------
 //Compact Function

@@ -406,9 +406,27 @@ fun main() {
     var comment = Comment().apply {
         likeCount
         disLikeCount
-        time=5
+        time = 5
         like()
         disLike()
+    }
+    //let scope function
+    val mComment2 = Comment().let {
+        it.likeCount++
+        it.content = "me"
+        it.like()
+
+    }
+//    val mComment3: Comment? = null
+//    mComment3?.likeCount
+//    mComment3?.content = "lll"
+//    mComment3?.like()
+
+    val mComment3: Comment? = null
+    mComment3?.let {
+        it.likeCount++
+        it.content = "comment"
+        it.like()
     }
 }
 //---------------------------------

@@ -415,7 +415,6 @@ fun main() {
         it.likeCount++
         it.content = "me"
         it.like()
-
     }
 //    val mComment3: Comment? = null
 //    mComment3?.likeCount

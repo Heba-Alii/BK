@@ -1,4 +1,5 @@
 package model
+
 //Standard Library Scope Function(Apply)
 class Comment {
     var content: String? = null
@@ -13,5 +14,9 @@ class Comment {
     fun disLike() {
         disLikeCount++
         println("disLike Count:$disLikeCount")
+    }
+
+    override fun toString(): String {
+        return "$content,$likeCount,$disLikeCount"
     }
 }

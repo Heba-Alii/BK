@@ -446,6 +446,16 @@ fun main() {
         like()
         like()
     }
+    //TakeIf
+    mComment5.takeIf {
+        it.likeCount > 0
+    }
+        ?.let { println(it) }
+    //TakeUnless
+    mComment4.takeUnless {
+        it.likeCount > 0
+    }
+        ?.let { println(it) }
 }
 //---------------------------------
 //Compact Function

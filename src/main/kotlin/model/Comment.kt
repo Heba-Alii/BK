@@ -2,7 +2,7 @@ package model
 
 //Standard Library Scope Function(Apply)
 class Comment {
-    var content: String? = null
+    lateinit var content: String
     var time: Int? = 0
     var likeCount: Int = 0
     var disLikeCount: Int = 0
@@ -18,5 +18,10 @@ class Comment {
 
     override fun toString(): String {
         return "$content,$likeCount,$disLikeCount"
+    }
+    //LateInit
+    fun showContent() {
+        if (::content.isInitialized)
+            println(content)
     }
 }

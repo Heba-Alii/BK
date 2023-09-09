@@ -456,6 +456,21 @@ fun main() {
         it.likeCount > 0
     }
         ?.let { println(it) }
+    //LateInit
+    var content = Comment()
+    content.content = "Hello"
+    content.showContent()
+    //Lazy Init
+    val mcomment6: Comment by lazy { Comment() }
+    mcomment6.content = "Hi heba"
+    mcomment6.showContent()
+    //EX Lazy Init
+    var no = 5
+    val duplicatedNumber: Int by lazy { no * 2 }
+    no = 8
+    println(duplicatedNumber)
+    no = 2
+    println(duplicatedNumber)
 }
 //---------------------------------
 //Compact Function

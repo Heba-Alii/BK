@@ -427,6 +427,18 @@ fun main() {
         it.content = "comment"
         it.like()
     }
+    //also scope function
+    val mComment4: Comment = Comment().also {
+        it.like()
+    }
+    println("also like count:${mComment4.likeCount}")
+    //With scope function
+    with(mComment4) {
+        this.content = "ali"
+        this.like()
+        this.likeCount++
+        this.like()
+    }
 }
 //---------------------------------
 //Compact Function

@@ -7,11 +7,11 @@ class Comment {
     var disLikeCount: Int = 0
     fun like() {
         likeCount++
-        println(likeCount)
+        println(" Like Count:$likeCount")
     }
 
     fun disLike() {
         disLikeCount++
-        println(disLikeCount)
+        println("disLike Count:$disLikeCount")
     }
 }

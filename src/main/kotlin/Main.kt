@@ -471,6 +471,20 @@ fun main() {
     println(duplicatedNumber)
     no = 2
     println(duplicatedNumber)
+    //Collections(List , set , map)
+    val stickerList = mutableListOf<String>("Happy", "Sad", "Smile")
+    val stickerSet = mutableSetOf<String>("Happy", "Sad", "Smile", "Happy", "Sad")
+    val stickerMap = mutableMapOf<String, Int>("Happy" to 1, "smile" to 2, "sad" to 3)
+    stickerList.add("No_Reaction")
+    stickerSet.add("No_Reaction")
+    stickerMap.put("No_Reaction", 4)
+    println("Sticker List :$stickerList")
+    println("Sticker Set :$stickerSet")
+    println("Sticker Map :$stickerMap")
+    stickerSet.remove("sad")
+    println(stickerSet)
+    println(stickerList[2])
+    println(stickerMap["smile"])
 }
 //---------------------------------
 //Compact Function

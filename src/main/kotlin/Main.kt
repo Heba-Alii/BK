@@ -439,6 +439,13 @@ fun main() {
         this.likeCount++
         this.like()
     }
+    //run scope function
+    val mComment5: Comment = Comment()
+    mComment5.run {
+        content = "hi"
+        like()
+        like()
+    }
 }
 //---------------------------------
 //Compact Function

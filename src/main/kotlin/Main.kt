@@ -485,6 +485,12 @@ fun main() {
     println(stickerSet)
     println(stickerList[2])
     println(stickerMap["smile"])
+    //reversed
+    val reversedStickerList = stickerList.reversed()
+    println(stickerList.reversed())
+    println(stickerList)
+    println(reversedStickerList)
+
 }
 //---------------------------------
 //Compact Function

@@ -513,6 +513,16 @@ fun main() {
     while (mapIterator.hasNext()) {
         println(mapIterator.next().key)
     }
+    //non homogeneous
+    val list = listOf("hey", 2, 5, null, 9.5, null)
+    println(list)
+    val set = setOf("heba", 5, 8, 5.5, 8, null, "Heba")
+    println(set)
+    //Multi Dimension
+    val list2 = listOf<List<Int>>(listOf(1, 2, 3), listOf(4, 5, 6), listOf(7, 8, 9))
+    println(list2)
+    val set2 = listOf(listOf(1, 2, 3), listOf(4, 5, 6), listOf(7, 8, 10))
+    println(set2)
 }
 //---------------------------------
 //Compact Function

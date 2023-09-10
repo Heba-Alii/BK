@@ -523,6 +523,16 @@ fun main() {
     println(list2)
     val set2 = listOf(listOf(1, 2, 3), listOf(4, 5, 6), listOf(7, 8, 10))
     println(set2)
+
+    val stickerList2 = listOf<String>("sad", "smile", "happy", "sick", "crying", "no_reaction")
+    val filterdList = startedWith(stickerList2, 's')
+    println(filterdList)
+    val filteredStickerList = stickerList2.filter { it[0] == 's' }
+    println(filteredStickerList)
+    //Filter Function
+    val myFilterList = stickerList2.myFilter({ it[0] == 's' })
+    println(myFilterList)
+
 }
 //---------------------------------
 //Compact Function
@@ -875,4 +885,27 @@ fun doSomeThing(attachment: GenericAttachment<BaseFile>) {
 //Generic in keyword
 fun inDoSOmeThing(inAttachment: GenericAttachment<VideoFile>) {
 
+}
+
+//-----------------------------------
+//Filter Function(High order Function)
+fun startedWith(list: List<String>, char: Char): List<String> {
+    var newList = mutableListOf<String>()
+    list.forEach {
+        if (it[0] == char) {
+            newList.add(it)
+        }
+    }
+    return newList
+
+}
+
+fun <T> List<T>.myFilter(function: (s: T) -> Boolean): List<T> {
+    val newList = mutableListOf<T>()
+    this.forEach {
+        if (function(it)) {
+            newList.add(it)
+        }
+    }
+    return newList
 }

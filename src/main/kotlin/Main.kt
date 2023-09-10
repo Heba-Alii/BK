@@ -490,7 +490,29 @@ fun main() {
     println(stickerList.reversed())
     println(stickerList)
     println(reversedStickerList)
-
+    //Traverse
+    //to loap for all items
+    //Step one(for)
+    for (i in stickerList.indices) {
+        println(stickerList[i])
+    }
+    //step two(forEach)
+    stickerList.forEach {
+        println(it)
+    }
+    //or(forEachIndexed )
+    stickerSet.forEachIndexed { index, s ->
+        println("[$index]=$s")
+    }
+    //Traverse Iterator(While)
+    val listIterator = stickerList.iterator()
+    while (listIterator.hasNext()) {
+        println(listIterator.next())
+    }
+    val mapIterator = stickerMap.iterator()
+    while (mapIterator.hasNext()) {
+        println(mapIterator.next().key)
+    }
 }
 //---------------------------------
 //Compact Function

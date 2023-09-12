@@ -532,6 +532,10 @@ fun main() {
     //Filter Function
     val myFilterList = stickerList2.myFilter({ it[0] == 's' })
     println(myFilterList)
+    //lambda
+    println(lambdaFunction(5, 6))
+    println(myLambdaFunction(6, 8))
+    noReturnFunction()
 
 }
 //---------------------------------
@@ -908,4 +912,19 @@ fun <T> List<T>.myFilter(function: (s: T) -> Boolean): List<T> {
         }
     }
     return newList
+}
+//-------------------------------------------
+//Lambda or anonymous function
+val myLambdaFunction =
+    { no1: Int, no2: Int ->
+        no1 + no2
+
+    }
+
+//or
+val lambdaFunction: (Int, Int) -> Int = { no1, no2 ->
+    no1 + no2
+}
+val noReturnFunction: () -> Unit = {
+    println("Hello lambda")
 }

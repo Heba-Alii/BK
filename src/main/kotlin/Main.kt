@@ -536,7 +536,7 @@ fun main() {
     println(lambdaFunction(5, 6))
     println(myLambdaFunction(6, 8))
     noReturnFunction()
-
+    println(doOperation2(5, 8, { no1: Int, no2: Int -> no1 * no2 }))
 }
 //---------------------------------
 //Compact Function
@@ -913,6 +913,7 @@ fun <T> List<T>.myFilter(function: (s: T) -> Boolean): List<T> {
     }
     return newList
 }
+
 //-------------------------------------------
 //Lambda or anonymous function
 val myLambdaFunction =
@@ -927,4 +928,10 @@ val lambdaFunction: (Int, Int) -> Int = { no1, no2 ->
 }
 val noReturnFunction: () -> Unit = {
     println("Hello lambda")
+}
+
+//Higher order function
+fun doOperation2(no1: Int, no2: Int, myFunction: (Int, Int) -> Int): Int {
+    var result = myFunction(no1, no2)
+    return result
 }

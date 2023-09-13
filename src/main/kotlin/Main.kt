@@ -537,6 +537,10 @@ fun main() {
     println(myLambdaFunction(6, 8))
     noReturnFunction()
     println(doOperation2(5, 8, { no1: Int, no2: Int -> no1 * no2 }))
+    println(doOperation2(5, 5, ::sum2))
+    //lambda function in another function called doOperation3
+    val finalResult2 = doOperation3 { num1: Int, num2: Int -> num1 * num2 }
+    println(finalResult2)
 }
 //---------------------------------
 //Compact Function
@@ -933,5 +937,16 @@ val noReturnFunction: () -> Unit = {
 //Higher order function
 fun doOperation2(no1: Int, no2: Int, myFunction: (Int, Int) -> Int): Int {
     var result = myFunction(no1, no2)
+    return result
+}
+
+//or
+//compact function
+fun sum2(num1: Int, num2: Int) =
+    num1 + num2
+
+//or
+fun doOperation3(myFuction: (Int, Int) -> Int): Int {
+    var result = myFuction(2, 5)
     return result
 }

@@ -541,6 +541,7 @@ fun main() {
     //lambda function in another function called doOperation3
     val finalResult2 = doOperation3 { num1: Int, num2: Int -> num1 * num2 }
     println(finalResult2)
+    println(stickerList2.myListFilter { it[0] == 'h' })
 }
 //---------------------------------
 //Compact Function
@@ -949,4 +950,15 @@ fun sum2(num1: Int, num2: Int) =
 fun doOperation3(myFuction: (Int, Int) -> Int): Int {
     var result = myFuction(2, 5)
     return result
+}
+
+//-----------------------------
+fun List<String>.myListFilter(function2: (s: String) -> Boolean): List<String> {
+    val newList2 = mutableListOf<String>()
+    this.forEach {
+        if (function2(it)) {
+            newList2.add(it)
+        }
+    }
+    return newList2
 }

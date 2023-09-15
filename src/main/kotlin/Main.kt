@@ -544,6 +544,7 @@ fun main() {
     println(stickerList2.myListFilter { it[0] == 'h' })
 }
 //---------------------------------
+                                     //Functions
 //Compact Function
 //fun like() {
 //    likeCount++

@@ -542,9 +542,18 @@ fun main() {
     val finalResult2 = doOperation3 { num1: Int, num2: Int -> num1 * num2 }
     println(finalResult2)
     println(stickerList2.myListFilter { it[0] == 'h' })
+    //Filter Not
+    println(stickerList2.filterNot { it[0] == 's' })
+    //Find
+    println(stickerList2.find { it.length == 5 })
+    var stickerResult = stickerList2.find { it[1] == 'a' }
+    println(stickerResult)
+    //Find Last
+    println(stickerList2.findLast { it[it.length - 1] == 'y' })
+    println(stickerList2.findLast { it.length == 4 })
 }
 //---------------------------------
-                                     //Functions
+//Functions
 //Compact Function
 //fun like() {
 //    likeCount++

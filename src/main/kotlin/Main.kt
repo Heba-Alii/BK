@@ -544,6 +544,7 @@ fun main() {
     println(stickerList2.myListFilter { it[0] == 'h' })
     //Filter Not
     println(stickerList2.filterNot { it[0] == 's' })
+    println(stickerList2.filterNot { it.length == 5 })
     //Find
     println(stickerList2.find { it.length == 5 })
     var stickerResult = stickerList2.find { it[1] == 'a' }

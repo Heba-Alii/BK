@@ -552,6 +552,22 @@ fun main() {
     //Find Last
     println(stickerList2.findLast { it[it.length - 1] == 'y' })
     println(stickerList2.findLast { it.length == 4 })
+    //Transformation List
+    //Map
+    val transformedList = stickerList2.map { it.toUpperCase() }
+    println(transformedList)
+    //Filter&Map
+    val transformedList2 = stickerList2.map { it.toUpperCase() }.filter { it[0] == 'S' }
+    println(transformedList2)
+    //FlatMap (To convert list from two dimension to one list)
+    val threeList = listOf<List<Int>>(listOf(1, 2, 3), listOf(4, 5, 6), listOf(8, 9, 10))
+    val flatList = threeList.flatMap { it }
+    println(threeList)
+    println(flatList)
+    //Flatten() == FlatMap{it}
+    val flatList2 = threeList.flatten()
+    println(flatList2)
+
 }
 //---------------------------------
 //Functions

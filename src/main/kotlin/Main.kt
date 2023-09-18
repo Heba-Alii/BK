@@ -567,6 +567,24 @@ fun main() {
     //Flatten() == FlatMap{it}
     val flatList2 = threeList.flatten()
     println(flatList2)
+    //Plus and minus
+    val numbersList = listOf("One", "Two", "Three", "Four", "Five", "Six")
+    println(numbersList + listOf("seven", "eight"))
+    println(numbersList - listOf("Two", "One"))
+    //Group By
+    println(numbersList.groupBy { it.first().toUpperCase() })
+    //slice
+    println(numbersList.slice(1..5))
+    println(numbersList.slice(1..5 step 2))
+    //Take and drop
+    println(numbersList.take(5))
+    println(numbersList.takeLast(5))
+    println(numbersList.drop(5))
+    println(numbersList.dropLast(5))
+    //Sorted by
+    println(numbersList.sortedBy { it.length })
+    //reversed
+    println(numbersList.reversed())
 
 }
 //---------------------------------

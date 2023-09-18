@@ -2,6 +2,7 @@ import interfaces.EditablePost
 import interfaces.Listener
 import javafx.geometry.Pos
 import model.*
+import java.security.Key
 import java.util.Date
 import javax.jws.soap.SOAPBinding.Use
 import kotlin.random.Random
@@ -585,6 +586,36 @@ fun main() {
     println(numbersList.sortedBy { it.length })
     //reversed
     println(numbersList.reversed())
+    //random order
+    println(numbersList.shuffled())
+    //retrieve List Part
+    var numbersList2 = (0..13).toList()
+    println(numbersList2.subList(2, 8))
+    //Linear search
+    println(numbersList.indexOf("Three"))
+    println(numbersList.lastIndexOf("Five"))
+    //set-specific operation
+    println(numbersList union setOf("Nine", "Ten"))
+    println(numbersList intersect setOf("Two", "One"))
+    //Map
+    val mapNumbers = mapOf(
+        "key1" to 1,
+        "key2" to 2,
+        "key3" to 3,
+        "key4" to 4,
+        "key5" to 5,
+        "key6" to 6,
+        "key7" to 7,
+        "key8" to 8,
+        "key9" to 9,
+        "key10" to 10,
+        "key11" to 11,
+        "key12" to 12
+    )
+    println(mapNumbers.filter { (key, value) -> key.endsWith("1") && value > 10 })
+    println(mapNumbers + Pair("key13", 13))
+    println(mapNumbers - ("key10"))
+    println(mapNumbers + mapOf("Key 14" to 14))
 
 }
 //---------------------------------

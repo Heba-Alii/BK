@@ -589,7 +589,7 @@ fun main() {
     //random order
     println(numbersList.shuffled())
     //retrieve List Part
-    var numbersList2 = (0..13).toList()
+    val numbersList2 = (0..13).toList()
     println(numbersList2.subList(2, 8))
     //Linear search
     println(numbersList.indexOf("Three"))
@@ -616,7 +616,6 @@ fun main() {
     println(mapNumbers + Pair("key13", 13))
     println(mapNumbers - ("key10"))
     println(mapNumbers + mapOf("Key 14" to 14))
-
 }
 //---------------------------------
 //Functions

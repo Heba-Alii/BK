@@ -625,8 +625,8 @@ fun main() {
         println(e.message)
     }
     println("Program is continue")
-    //Let Scope Function
-    //it refer to useAge
+    //Let Scope Function(To resolve errors and exceptions) to know number int or not
+    //it -> refer to useAge
     useAge.toIntOrNull()?.let { println("Your Birthday is:${calculateBirth(it)}") }
     println("Program is continue")
 }

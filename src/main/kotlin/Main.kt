@@ -616,6 +616,19 @@ fun main() {
     println(mapNumbers + Pair("key13", 13))
     println(mapNumbers - ("key10"))
     println(mapNumbers + mapOf("Key 14" to 14))
+    //Error Handling
+    //Try & Catch
+    val useAge = "26"
+    try {
+        println("Your Birthday : ${calculateBirth(useAge.toInt())}")
+    } catch (e: Exception) {
+        println(e.message)
+    }
+    println("Program is continue")
+    //Let Scope Function
+    //it refer to useAge
+    useAge.toIntOrNull()?.let { println("Your Birthday is:${calculateBirth(it)}") }
+    println("Program is continue")
 }
 //---------------------------------
 //Functions
@@ -1037,3 +1050,10 @@ fun List<String>.myListFilter(function2: (s: String) -> Boolean): List<String> {
     }
     return newList2
 }
+
+//fun calculateBirth(input: Int) :Int{
+//    return 2021-input
+//}
+
+//or
+fun calculateBirth(input: Int) = 2021 - input

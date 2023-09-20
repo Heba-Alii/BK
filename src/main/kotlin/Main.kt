@@ -1050,10 +1050,34 @@ fun List<String>.myListFilter(function2: (s: String) -> Boolean): List<String> {
     }
     return newList2
 }
-
+//---------------------------------------------
 //fun calculateBirth(input: Int) :Int{
 //    return 2021-input
 //}
 
 //or
 fun calculateBirth(input: Int) = 2021 - input
+
+//----------------------------------------------
+//Multi Dimension Example
+fun solution(matrix: MutableList<MutableList<Int>>): Int {
+    val rows = matrix.size
+    val cols = matrix[0].size
+    var totalSum = 0
+
+    for (col in 0 until cols) {
+        var hauntedEncountered = false
+        for (row in 0 until rows) {
+            if (hauntedEncountered) {
+                matrix[row][col] = 0
+            } else {
+                totalSum += matrix[row][col]
+            }
+            if (matrix[row][col] == 0) {
+                hauntedEncountered = true
+            }
+        }
+    }
+
+    return totalSum
+}

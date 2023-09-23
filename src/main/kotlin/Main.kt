@@ -1094,3 +1094,14 @@ fun calculateBirth(input: Int) = 2021 - input
 //    }
 //    return totalSum
 //}
+//OR
+//fun solution(matrix: MutableList<MutableList<Int>>): Int {
+//    var sum = 0
+//    for(i in 0..matrix[0].size - 1)
+//        for(j in 0..matrix.size - 1)
+//            if(matrix[j][i] == 0)
+//                break
+//            else
+//                sum += matrix[j][i]
+//    return sum
+//}

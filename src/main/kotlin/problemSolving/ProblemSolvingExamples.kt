@@ -116,4 +116,29 @@ class ProblemSolvingExamples {
         return commonCount
     }
     //--------------------------------------------
+//    Ticket numbers usually consist of an even number of digits. A ticket number is considered lucky if the sum of the first half of the digits is equal to the sum of the second half.
+//
+//    Given a ticket number n, determine if it's lucky or not.
+//
+//    Example
+//
+//    For n = 1230, the output should be
+//    solution(n) = true;
+//    For n = 239017, the output should be
+//    solution(n) = false.
+
+    fun solution5(n: Int): Boolean {
+        var numStr = n.toString()
+        var length = numStr.length
+        if (length % 2 != 0) {
+            return false
+        }
+        var halfLength = length / 2
+        var firstHalf = numStr.substring(0, halfLength)
+        var secondHalf = numStr.substring(halfLength)
+        var sumFirstHalf = firstHalf.map { it.toString().toInt() }.sum()
+        var sumSecondtHalf = secondHalf.map { it.toString().toInt() }.sum()
+        return sumFirstHalf == sumSecondtHalf
+    }
+//----------------------------------------
 }

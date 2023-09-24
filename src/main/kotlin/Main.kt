@@ -2,6 +2,7 @@ import interfaces.EditablePost
 import interfaces.Listener
 import javafx.geometry.Pos
 import model.*
+import problemSolving.ProblemSolvingExamples
 import java.security.Key
 import java.util.Date
 import javax.jws.soap.SOAPBinding.Use
@@ -629,6 +630,8 @@ fun main() {
     //it -> refer to useAge
     useAge.toIntOrNull()?.let { println("Your Birthday is:${calculateBirth(it)}") }
     println("Program is continue")
+    var problemSolving =ProblemSolvingExamples()
+    println(problemSolving.solution5(123421))
 }
 //---------------------------------
 //Functions

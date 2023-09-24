@@ -56,13 +56,13 @@ class ProblemSolvingExamples {
     fun longestArray(inputArray: MutableList<String>): MutableList<String> {
         var maxLength = 0
         var newList = mutableListOf<String>()
-        for (str in inputArray){
-            var strLength=str.length
-            if (strLength>maxLength){
-                maxLength=strLength
+        for (str in inputArray) {
+            var strLength = str.length
+            if (strLength > maxLength) {
+                maxLength = strLength
                 newList.clear()
                 newList.add(str)
-            }else if (strLength==maxLength){
+            } else if (strLength == maxLength) {
                 newList.add(str)
             }
 
@@ -70,5 +70,50 @@ class ProblemSolvingExamples {
         return newList
     }
 
+    //----------------------------------------------------------
+    //  Given two strings, find the number of common characters between them.
+    fun solution(s1: String, s2: String): Int {
+        var charSet1 = s1.toSet()
+        var charSet2 = s2.toSet()
+        var commonCharacter = charSet1.intersect(charSet2)
+        return commonCharacter.size
+    }
 
+    //Or
+    fun solution2(s1: String, s2: String): Int {
+        var commonCharacter = mutableListOf<Char>()
+        var commonCount: Int = 0
+
+
+        for (char in s1) {
+            if (char in s2 && char !in commonCharacter) {
+                commonCount++
+                commonCharacter.add(char)
+            }
+        }
+        return commonCount
+    }
+
+    //or
+    fun solution3(s1: String, s2: String): Int {
+        val charCount = IntArray(26) // Assuming only lowercase letters
+
+        // Count the characters in s1
+        for (char in s1) {
+            charCount[char - 'a']++
+        }
+
+        var commonCount = 0
+
+        // Check and count the characters in s2
+        for (char in s2) {
+            if (charCount[char - 'a'] > 0) {
+                commonCount++
+                charCount[char - 'a']--
+            }
+        }
+
+        return commonCount
+    }
+    //--------------------------------------------
 }

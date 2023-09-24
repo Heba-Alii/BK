@@ -140,5 +140,20 @@ class ProblemSolvingExamples {
         var sumSecondtHalf = secondHalf.map { it.toString().toInt() }.sum()
         return sumFirstHalf == sumSecondtHalf
     }
-//----------------------------------------
+
+    //----------------------------------------
+    //Sort by Height
+//Some people are standing in a row in a park. There are trees between them which cannot be moved. Your task is to rearrange the people by their heights in a non-descending order without moving the trees. People can be very tall!
+    fun solution6(a: MutableList<Int>): MutableList<Int> {
+        var peopleHeight = a.filter { it != -1 }.sorted()
+        var heightIndex = 0
+        for (i in a.indices) {
+            if (a[i] != -1) {
+                a[i] = peopleHeight[heightIndex]
+                heightIndex++
+            }
+        }
+        return a
+    }
+    //---------------------------------
 }

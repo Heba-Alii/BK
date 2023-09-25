@@ -37,8 +37,7 @@ class ProblemSolvingExamples {
         return totalSum
     }
 
-//OR
-
+    //OR
     fun solutions(matrix: MutableList<MutableList<Int>>): Int {
         var sum = 0
         for (i in 0..matrix[0].size - 1)
@@ -142,6 +141,7 @@ class ProblemSolvingExamples {
     }
 
     //----------------------------------------
+
     //Sort by Height
 //Some people are standing in a row in a park. There are trees between them which cannot be moved. Your task is to rearrange the people by their heights in a non-descending order without moving the trees. People can be very tall!
     fun solution6(a: MutableList<Int>): MutableList<Int> {

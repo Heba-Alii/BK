@@ -249,8 +249,10 @@ fun main() {
     println("Function (getFriendsNameStartWithA${getFriendsNameStartWithA(myFriends, 'A')}")
     var products = listOf<Int>(5, 4, -3, 9, 2, 1)
     println("Function (solution)${solution(products)}")
+
     var statues = listOf<Int>(6, 2, 3, 8)
-    println("Function(Statues)${statues(statues)}")
+    var problem = ProblemSolvingExamples()
+    println("Function(Statues)${problem.statues(statues)}")
     println("Lambda Function ${myFunction(2, 6)}")
     println("Lambda Function 2=${myFunction2(5, 5)}")
     myFuction3()

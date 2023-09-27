@@ -181,4 +181,21 @@ class ProblemSolvingExamples {
         return totalSum
     }
 
+    //-------------------------------------------
+//Statues Example
+    fun statues(statueList: List<Int>): Int {
+//    if (statueList.isEmpty()){
+//        return 0
+//    }
+        var sortedStatues = statueList.sorted()
+        var additionalStatues = 0
+        for (i in 1 until sortedStatues.size) {
+            var minusStatues = sortedStatues[i] - sortedStatues[i - 1] - 1
+            if (minusStatues > 0) {
+                additionalStatues += minusStatues
+            }
+        }
+        return additionalStatues
+    }
+
 }

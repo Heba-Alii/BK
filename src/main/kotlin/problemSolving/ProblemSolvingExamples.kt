@@ -198,4 +198,27 @@ class ProblemSolvingExamples {
         return additionalStatues
     }
 
+    //Write a function that reverses characters in (possibly nested) parentheses in the input string.
+    fun solution(inputString: String): String {
+        var stack = mutableListOf<String>()
+        var result = ""
+        for (char in inputString) {
+            when {
+                char == '(' -> {
+                    stack.add(result)
+                    result = ""
+                }
+
+                char == ')' -> {
+                    var reversed = result.reversed()
+                    result = stack.removeAt(stack.size - 1) + reversed
+                }
+
+                else ->
+                    result += char
+            }
+        }
+        return result
+    }
+
 }

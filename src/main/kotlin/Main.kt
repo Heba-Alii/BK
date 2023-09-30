@@ -634,6 +634,10 @@ fun main() {
     println("Program is continue")
     var problemSolving = ProblemSolvingExamples()
     println(problemSolving.solution5(123421))
+    var solurion8=ProblemSolvingExamples()
+
+    var list5= mutableListOf<Int>(50,60,60,45,70)
+    println(solurion8.solution8(list5))
 }
 //---------------------------------
 //Functions

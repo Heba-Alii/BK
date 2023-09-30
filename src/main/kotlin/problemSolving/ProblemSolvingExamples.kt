@@ -198,6 +198,7 @@ class ProblemSolvingExamples {
         return additionalStatues
     }
 
+    //-----------------------------------------------
     //Write a function that reverses characters in (possibly nested) parentheses in the input string.
     fun solution(inputString: String): String {
         var stack = mutableListOf<String>()
@@ -221,4 +222,21 @@ class ProblemSolvingExamples {
         return result
     }
 
+    //----------------------------------------------------
+    //array of positive integers - the weights of the people
+    fun solution8(a: MutableList<Int>): MutableList<Int> {
+        var totalWeight1 = 0
+        var totalWeight2 = 0
+        for (i in a.indices) {
+            if (i % 2 == 0) {
+                totalWeight1 += a[i]
+            } else {
+                totalWeight2 += a[i]
+            }
+        }
+        return mutableListOf(
+            totalWeight1, totalWeight2
+        )
+    }
+//-------------------------------------------------------
 }

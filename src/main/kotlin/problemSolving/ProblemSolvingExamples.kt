@@ -238,5 +238,17 @@ class ProblemSolvingExamples {
             totalWeight1, totalWeight2
         )
     }
-//-------------------------------------------------------
+    //-------------------------------------------------------
+    //rectangular matrix of characters, add a border of asterisks
+    fun solution(picture: MutableList<String>): MutableList<String> {
+        val borderedPicture = mutableListOf<String>()
+        val borderRow = "*".repeat(picture[0].length + 2)
+        borderedPicture.add(borderRow)
+        for (row in picture) {
+            val borderedRow = "*$row*"
+            borderedPicture.add(borderedRow)
+        }
+        borderedPicture.add(borderRow)
+        return borderedPicture
+    }
 }
